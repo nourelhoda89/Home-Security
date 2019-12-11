@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+   <head>
+      <title>GPIO Control</title>
+      <link rel="stylesheet" href='../static/style.css'/>
+   </head>
+   <body>
+		<h1>Welcome Home Nour</h1>
+		<h2> Sensor Status </h2>
+		<h3> BUTTON ==>  {{button}}</h3>
+		<h3> MOTION ==>  {{senPIR }}</h3>
+      <h3>Message==> {{message}}</h3>
+		
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+         <script type=text/javascript>
+                 $(function() {
+                   $('a#test').bind('click', function() {
+                     $.getJSON('/background_process_test',
+                         function(data) {
+                       //do nothing
+                       
+                       
+                     });
+                     return data;
+                   });
+                 });
+         </script>
+
+
+      <div class='container'>
+          <h3>MODE</h3>
+              <form>
+                  <a href=# id=test>
+                     <button class='btn btn-default' type="submit" name="mode" value=0 >ON</button>
+                     <button class='btn btn-default' type="submit" name="mode" value=1 >OFF</button>
+         
+              </form>
+
+      </div>
+		
+   </body>
+</html>
